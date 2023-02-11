@@ -1,0 +1,56 @@
+[
+    {
+        "name": "Gura Gura No Mi",
+        "type": "Paramecia",
+        "ability": "be Able to Manipulating Earth Quake",
+        "charId": 1
+    },
+    {
+        "name": "Hito Hito No Mi : Daibutsu",
+        "type": "Zoan",
+        "ability": "be Able to Turn into Budha",
+        "charId": 2
+    },
+    {
+        "name": "Magu Magu",
+        "type": "Logia",
+        "ability": "be Able to Create, Manipulate, and Turn into Magma",
+        "charId": 3
+    },
+    {
+        "name": "Bomu Bomu no Mi",
+        "type": "Paramecia",
+        "ability": "Explosion Manipulation",
+        "charId": 4
+    },
+    {
+        "name": "Ope Ope no Mi",
+        "type": "Paramecia",
+        "ability": "Space-Time Manipulation",
+        "charId": 5
+    },
+    {
+        "name": "Zou Zou no Mi, Model: Elephant",
+        "type": "Zoan",
+        "ability": "Elephant Transformation",
+        "charId": 6
+    },
+    {
+        "name": "Sui Sui no Mi",
+        "type": "Paramecia",
+        "ability": "Ground Manipulation, be able to swim in the ground / earth",
+        "charId": 7
+    },
+    {
+        "name": "Moku Moku no Mi",
+        "type": "Logia",
+        "ability": "Smoke Manipulation",
+        "charId": 8
+    },
+    {
+        "name": "Hana Hana No Mi",
+        "type": "Paramecia",
+        "ability": "Be able to multiply user body",
+        "charId": 12
+    }
+]

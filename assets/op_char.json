@@ -1,0 +1,58 @@
+[
+    {
+        "name": "Edward Newgate",
+        "team_id": 1
+    },
+    {
+        "name": "Sengoku",
+        "team_id": 4
+    },
+    {
+        "name": "Akainu",
+        "team_id": 4
+    },
+    {
+        "name": "Mr. 5",
+        "team_id": 2
+    },
+    {
+        "name": "Trafalgar Law",
+        "team_id": 5
+    },
+    {
+        "name": "Spandam's Sword",
+        "team_id": 4
+    },
+    {
+        "name": "Senor Pink",
+        "team_id": 5
+    },
+    {
+        "name": "Smoker",
+        "team_id": 4
+    },
+    {
+        "name": "Monkey D Luffy",
+        "team_id": 3
+    },
+    {
+        "name": "Vinsmoke Sanji",
+        "team_id": 3
+    },
+    {
+        "name": "Marshal D Teach",
+        "team_id": 1
+    },
+    {
+        "name": "Nico Robin",
+        "team_id": 3
+    },
+    {
+        "name": "Portegaz D Ace",
+        "team_id": 1
+    }, 
+    {
+        "name": "Roronoa Zoro",
+        "team_id": 3
+    }
+]
