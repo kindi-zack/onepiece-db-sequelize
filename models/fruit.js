@@ -15,15 +15,24 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Fruit.init({
-    name: DataTypes.STRING,
+    name: {
+      type: DataTypes.STRING,
+      validate: {
+        // notEmpty: true
+        notEmpty: {
+          args: true,
+          msg: 'Name is Required !!!'
+        }
+      }
+    },
     type: DataTypes.STRING,
     ability: DataTypes.STRING,
     charId: DataTypes.INTEGER
   }, {
     hooks:{
-      beforeCreate(instance, opt) {
-       return instance.name = instance.name + ' belong to char id ' + instance.charId 
-      }
+      // beforeCreate(instance, opt) {
+      //  return instance.name = instance.name + ' belong to char id ' + instance.charId 
+      // }
     },
     sequelize,
     modelName: 'Fruit',

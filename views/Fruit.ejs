@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+
+    <style>
+
+    </style>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <%- include('partials/Navbar') %>
+        <main class="main">            
+            <table>
+                <!-- Table Content -->
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Ability</th>
+                        <th>User</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% fruits.forEach(el => { %>
+                    <tr>
+                        <td><%= el.name %></td>
+                        <td><%= el.type %></td>
+                        <td><%= el.ability %></td>
+                        <% if(el.charId) { %>
+                            <td><%= el.Char.name %></td>
+                        <%}else {%>
+                            <td><%= 'Unkown' %></td>
+                        <%}%>
+                    </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+
+        </main>
+
+        <!-- Footer Content -->
+        <%- include('partials/Footer') %>
+          
+    </div>
+</body>
+
+</html>

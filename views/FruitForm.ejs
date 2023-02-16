@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css">
+    <style>
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        background-color: #f0f0f0;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      label,
+      input,
+      textarea {
+        margin: 10px 0;
+      }
+
+      label {
+        font-weight: bold;
+      }
+
+      input,
+      textarea {
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      input[type="text"],
+      textarea {
+        width: 100%;
+        max-width: 400px;
+      }
+
+      input[type="submit"] {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #3e8e41;
+      }
+    </style>
+
+    <title>Document</title>
+  </head>
+
+  <body>
+    <!-- <div class="container"> -->
+
+        <%- include('partials/Navbar') %>
+
+        <%if(data) {%>
+            <pre><%=JSON.stringify(data.msg)%></pre>
+        <%}%>
+
+      <main class="main">
+        <form action="/fruit/form" method="POST">
+          <label for="name">Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+          />
+
+          <label for="type">Type:</label>
+          <input
+            type="text"
+            id="type"
+            name="type"
+            placeholder="Enter your type"
+          />
+
+          <label for="charId">Char Id:</label>
+          <input
+            type="number"
+            id="charId"
+            name="charId"
+          />
+
+          <label for="ability">Ability:</label>
+          <textarea
+            id="ability"
+            name="ability"
+            placeholder="Enter your ability"
+          ></textarea>
+
+          <input type="submit" value="Submit" />
+        </form>
+      </main>
+
+      <!-- Footer Content -->
+      <%- include('partials/Footer') %>
+    <!-- </div> -->
+  </body>
+</html>

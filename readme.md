@@ -10,3 +10,6 @@ one to one ✔ (char - devilfruit)
 
 hooks ❌
 validation ❌
+you can see validation on :
+-controller static postFruit
+-models/Fruit
