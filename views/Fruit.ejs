@@ -32,7 +32,13 @@
                     <tr>
                         <td><%= el.name %></td>
                         <td><%= el.type %></td>
-                        <td><%= el.ability %></td>
+                        
+                        <% if(el.ability) { %>
+                            <td><%= el.ability %></td>
+                        <%}else {%>
+                            <td><%= 'Unkown' %></td>
+                        <%}%>
+
                         <% if(el.charId) { %>
                             <td><%= el.Char.name %></td>
                         <%}else {%>

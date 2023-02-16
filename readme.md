@@ -9,7 +9,7 @@ one to one ✔ (char - devilfruit)
 
 
 hooks ❌
-validation ❌
+validation ✔
 you can see validation on :
--controller static postFruit
+-from controller static postFruit catch to static fruitForm
 -models/Fruit

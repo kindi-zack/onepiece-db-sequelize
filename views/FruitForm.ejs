@@ -63,10 +63,10 @@
         <%- include('partials/Navbar') %>
 
         <%if(data) {%>
-            <pre><%=JSON.stringify(data.msg)%></pre>
+            <% data.map(el => { %>
+                <p><%= el %></p>
+           <% } )%>
         <%}%>
-
-      <main class="main">
         <form action="/fruit/form" method="POST">
           <label for="name">Name:</label>
           <input

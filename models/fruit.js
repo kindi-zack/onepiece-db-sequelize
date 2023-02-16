@@ -25,7 +25,15 @@ module.exports = (sequelize, DataTypes) => {
         }
       }
     },
-    type: DataTypes.STRING,
+    type: {
+      type: DataTypes.STRING,
+      validate: {
+        isIn: {
+          args: [['Logia', 'Paramecia', 'Zoan']],
+          msg: 'Type Must be Logia or Paramecia or Zoan'
+        }
+      }
+    },
     ability: DataTypes.STRING,
     charId: DataTypes.INTEGER
   }, {

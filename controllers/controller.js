@@ -48,11 +48,15 @@ class Controller {
     }
 
     static fruitForm(req, res) {
-        const errMessages = req.query
-        // if(errMessages) {
-            
-        // }
-        res.render('FruitForm', {data: errMessages})
+        let errMessages = req.query
+        let errors
+        if(errMessages.msg) {
+            errors = errMessages.msg.split(',')
+        }
+        console.log('DARI REQ QUERY BOSS ==========================')
+        console.log(errors)
+        // res.send(errMessages)
+        res.render('FruitForm', { data: errors})
     }
 
     static postFruit(req, res) {
@@ -61,7 +65,7 @@ class Controller {
         Fruit.create({
             name: data.name,
             type: data.type,
-            ability: data.ability,
+            ability: data.ability || null,
             charId: data.charId || null
         })
         .then(fruit => {
@@ -70,9 +74,14 @@ class Controller {
             // console.log()
         })
         .catch(err => {
-            console.log(err)
-            res.redirect(`/fruit/form?msg=${err.message}`)
-            // res.send(err)
+            // console.log(err)
+            let errMessages = err.errors
+            errMessages = errMessages.map(el => {
+                return el.message
+            })
+            // console.log(errMessages)
+            // res.send(errMessages)
+            res.redirect(`/fruit/form?msg=${errMessages}`)
         })
     }
 }
